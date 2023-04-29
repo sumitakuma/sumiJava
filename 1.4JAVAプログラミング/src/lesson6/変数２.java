@@ -21,9 +21,9 @@ public class 変数２ {
 //		④デクリメント演算子を適用して数値を 1 減らす。
 //		⑤コンソールに変数 i の値を表示する。
 		int i = 100;
-		i = ++i;
+		++i;
 		System.out.println(i);
-		i = --i;
+		--i;
 		System.out.println(i);
 		
 		
