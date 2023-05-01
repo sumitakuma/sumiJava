@@ -7,9 +7,12 @@ public class 変数２ {
 //		変数 x を宣言し、「3」を代入して下さい。
 //		変数 x に自己代入を使って「20」を掛け算して下さい。
 //		その後 x の値をコンソールに表示して下さい。
-		int x = 3;
-		x  *= 20;
-		System.out.println(x);
+		
+		int x = 3;	//整数なので、整数型のintにxとして代入
+		
+		x  *= 20;	//xに20を掛ける。この際、省略型を使用
+		
+		System.out.println(x);	//ここでのxの出力は1段上の20をかけた状態になる
 		
 		
 		
@@ -20,11 +23,16 @@ public class 変数２ {
 //		③コンソールに変数 i の値を表示する。
 //		④デクリメント演算子を適用して数値を 1 減らす。
 //		⑤コンソールに変数 i の値を表示する。
-		int i = 100;
-		++i;
-		System.out.println(i);
-		--i;
-		System.out.println(i);
+		
+		int i = 100;	//int 型の変数 i に 100 を代入
+		
+		++i;			//インクリメント演算子を適用して数値を 1 増やす。
+		
+		System.out.println(i);	//コンソールに変数 i の値を表示する。
+		
+		--i;			//デクリメント演算子を適用して数値を 1 減らす。
+		
+		System.out.println(i);	//コンソールに変数 i の値を表示する。
 		
 		
 //		問３）
@@ -34,9 +42,11 @@ public class 変数２ {
 //		例）
 //		あなたの年齢を予想します。
 //		あなたの年齢はおそらく〇〇歳ですね？
-		Random rand = new Random();
-		int randomNum = rand.nextInt(100) + 1;
-		System.out.println("あなたの年齢はおそらく" + randomNum + "歳ですね？");
+		Random rand = new Random();			//ランダム要素を出力するために、Randomを使用
+		
+		int randomNum = rand.nextInt(100) + 1;		//本来数字は０を始めとした構造のため、＋１している
+		
+		System.out.println("あなたの年齢はおそらく" + randomNum + "歳ですね？");		//あなたの年齢はおそらく〇〇歳ですね？
 		
 	}
 }
