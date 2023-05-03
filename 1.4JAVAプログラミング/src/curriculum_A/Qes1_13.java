@@ -55,16 +55,22 @@ public class Qes1_13 {
 //		上記で作成した変数を必ず使用すること
 //		11110		//a～dの合計
 		System.out.println(a + b + c + d);
+		
 //		20			//整数表記のため、aを2回分算出
 		System.out.println(a + a);
+		
 //		a ハロー true		//スペースを含めるため、g・h・iの間に空白文字を追加
 		System.out.println(g + " " + h + " " + i);
+		
 //		11130				数字を全て足す		//aからfの合計
 		System.out.println(a + b + c + d + e + f);
+		
 //		10000000000			小数点以外の数字を全てかける		//整数はa～d
 		System.out.println(a * b * c * d);
+		
 //		0.105				10.5割る100をする		
 		System.out.println(f / b);
+		
 //		-90					10引く100をする
 		System.out.println(a - b);
 
@@ -75,31 +81,46 @@ public class Qes1_13 {
 //		　String num="20";			
 //		　int num1=23;			
 //		　System.out.println("ハローJAVA"+(num+num1));	
+		
 		String num = "4";	//20を4に変更
+		
 		int num1 = 3;		//23を3に変更
+		
 		System.out.println("ハローJAVA" + (num + num1));
 					
 //		問６）					
 //		『』で囲われた人の情報を変数にして、formatの通りコンソールに出力してください			
 //		ローカル変数に代入し○○に入れてください			
-//		『山田太郎 18歳 170.5cm 62.2kg 寿司』			
+//		『山田太郎 18歳 170.5cm 62.2kg 寿司』		
+		
 		String name = "山田太郎";	//文字入力なので、Stringを使用	
+		
 		String eat = "寿司";		//文字入力なので、Stringを使用	
+		
 		byte age = 18;				//整数なので整数に対して使用できるものを使用
+		
 		double height = 170.5;		//小数点型なので、doubleを使用
+		
 		double weight = 62.2;		//小数点型なので、doubleを使用
+		
 //		↓↓format↓↓			
 //		「初めまして○○です」			
 //		「年齢は○○歳です」			
 //		「身長は○○cmです」			
 //		「体重は○○kgです」			
 //		「好きな食べ物は○○です」	
+		
 		System.out.println("初めまして" + name + "です");	//「初めまして○○です」	
+		
 		System.out.println("年齢は" + age + "歳です");		//「年齢は○○歳です」
+		
 		System.out.println("身長は" + height + "cmです");	//「身長は○○cmです」
+		
 		System.out.println("体重は" + weight + "kgです");	//「体重は○○kgです」
+		
 		System.out.println("好きな食べ物は" + eat + "です");	//「好きな食べ物は○○です」
 					
+		
 //　	問７）					
 //		6で作成した自己紹介に続いてBMIが出力されるようにしてください			
 //		「BMIは○○です」			
@@ -119,18 +140,29 @@ public class Qes1_13 {
 //		　体重は64.2kgです			
 //		　好きな食べ物はオムライスです			
 //		　BMIは22.6です			
+		
 		name = "鈴木一郎";	//再代入なので、変数宣言を省く
+		
 		age = 24;			//再代入なので、変数宣言を省く
+		
 		height =168.5;		//再代入なので、変数宣言を省く
+		
 		weight = 64.2;		//再代入なので、変数宣言を省く
+		
 		eat = "オムライス";	//再代入なので、変数宣言を省く
+		
 		bmi = 22.6;			//再代入扱いなので、計算をせず、数値をそのまま代入
 		
 		System.out.println("初めまして" + name + "です");	//初めまして鈴木一郎です	
+		
 		System.out.println("年齢は" + age + "歳です");		//年齢は24歳です
+		
 		System.out.println("身長は" + height + "cmです");	//身長168.5cmです	
+		
 		System.out.println("体重は" + weight + "kgです");	//体重は64.2kgです	
+		
 		System.out.println("好きな食べ物は" + eat + "です");	//好きな食べ物はオムライスです
+		
 		System.out.println("BMIは" + bmi + "です");			//BMIは22.6です
 		
 		
@@ -142,48 +174,73 @@ public class Qes1_13 {
 //		　体重は128.4kgです			
 //		　好きな食べ物はオムライスです			
 //		　BMIは11.31です			
+		
 		age += age;								//自己代入
+		
 		height += height;						//自己代入
+		
 		weight += weight;						//自己代入
+		
 		double height3 = height / 100;				//身長を100で割り、cmをmに変換
+		
 		double bmi2 = weight / height3 /height3;	//体重(kg)÷身長(m)÷身長(m)
 		
 		System.out.println("初めまして" + name + "です");						//初めまして鈴木一郎です
+		
 		System.out.println("年齢は" + age + "歳です");							//年齢は48歳です
+		
 		System.out.println("身長は" + height + "cmです");						//身長337.0cmです
+		
 		System.out.println("体重は" + weight + "kgです");						//体重は128.4kgです
+		
 		System.out.println("好きな食べ物は" + eat + "です");					//好きな食べ物はオムライスです	
+		
 		System.out.println("BMIは" + String.format("%.2f", bmi2) + "です");	//BMIは11.31です　小数点第2位の表記なので、%.2f
 		
 					
 //		問１０）					
 //		8で使用した年齢が25歳以上ならtrueが出力されるようにしてください。ただしif文は使いません		
+		
 		name = "鈴木一郎";	//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
+		
 		age = 24;			//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
+		
 		height =168.5;		//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
+		
 		weight = 64.2;		//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
+		
 		eat = "オムライス";	//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
+		
 		bmi = 22.6;			//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
 		
 		System.out.println(age >= 25);	//年齢が25歳以上の時のみtrueが出力される
 				
 //		問１１）		
 //		8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください			
+		
 		String str1 = Integer.toString(age);	//文字型をString型に変換
+		
 		String str2 = String.valueOf(height);	//文字型をString型に変換
+		
 		String str3 = String.valueOf(weight);	//文字型をString型に変換
 		
 		System.out.println(str1 + str2 + str3);	//str型にした3つを繋げて出力
+		
 //		問１２）		
 //		11で変換した【年齢・身長】を整数型に変換して出力してください			
+		
 		int nenrei = Integer.parseInt(str1);			//String型を整数に変換
+		
 		double sintyou = Double.parseDouble(str2);		//String型を小数点型に変換
+		
 		int sintyou1 = (int)sintyou;					//小数点型を整数に変換
 		
 		System.out.println(nenrei + sintyou1);			//年齢と身長の数値を合計
+		
 //		問１３）			
 //		12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください			
 //		ただしif文は使わないでください			
+		
 		System.out.println(age == 25 ||  height >= 160);		//年齢が25もしくは身長が160以上という条件を追加
 		
 		
