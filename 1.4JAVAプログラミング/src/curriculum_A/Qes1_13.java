@@ -73,6 +73,7 @@ public class Qes1_13 {
 		
 //		-90					10引く100をする
 		System.out.println(a - b);
+		System.out.println();
 
 
 //		問５)
@@ -87,6 +88,7 @@ public class Qes1_13 {
 		int num1 = 3;		//23を3に変更
 		
 		System.out.println("ハローJAVA" + (num + num1));
+		System.out.println();
 					
 //		問６）					
 //		『』で囲われた人の情報を変数にして、formatの通りコンソールに出力してください			
@@ -102,6 +104,7 @@ public class Qes1_13 {
 		double height = 170.5;		//小数点型なので、doubleを使用
 		
 		double weight = 62.2;		//小数点型なので、doubleを使用
+		System.out.println();
 		
 //		↓↓format↓↓			
 //		「初めまして○○です」			
@@ -119,6 +122,7 @@ public class Qes1_13 {
 		System.out.println("体重は" + weight + "kgです");	//「体重は○○kgです」
 		
 		System.out.println("好きな食べ物は" + eat + "です");	//「好きな食べ物は○○です」
+		System.out.println();
 					
 		
 //　	問７）					
@@ -131,6 +135,7 @@ public class Qes1_13 {
 		double bmi = weight / height2 /height2;	//体重(kg)÷身長(m)÷身長(m)
 		
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です");	//「BMIは○○です」
+		System.out.println();
 					
 //　	問８）					
 //		6で宣言した変数に再代入し下記の通りコンソールに出力してください			
@@ -164,6 +169,7 @@ public class Qes1_13 {
 		System.out.println("好きな食べ物は" + eat + "です");	//好きな食べ物はオムライスです
 		
 		System.out.println("BMIは" + bmi + "です");			//BMIは22.6です
+		System.out.println();
 		
 		
 //		問９）					
@@ -196,6 +202,7 @@ public class Qes1_13 {
 		System.out.println("好きな食べ物は" + eat + "です");					//好きな食べ物はオムライスです	
 		
 		System.out.println("BMIは" + String.format("%.2f", bmi2) + "です");	//BMIは11.31です　小数点第2位の表記なので、%.2f
+		System.out.println();
 		
 					
 //		問１０）					
@@ -214,6 +221,7 @@ public class Qes1_13 {
 		bmi = 22.6;			//ここで改めて表記しないと問9の数値が出力されかねないので、改めて出力。
 		
 		System.out.println(age >= 25);	//年齢が25歳以上の時のみtrueが出力される
+		System.out.println();
 				
 //		問１１）		
 //		8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください			
@@ -225,6 +233,7 @@ public class Qes1_13 {
 		String str3 = String.valueOf(weight);	//文字型をString型に変換
 		
 		System.out.println(str1 + str2 + str3);	//str型にした3つを繋げて出力
+		System.out.println();
 		
 //		問１２）		
 //		11で変換した【年齢・身長】を整数型に変換して出力してください			
@@ -236,6 +245,7 @@ public class Qes1_13 {
 		int sintyou1 = (int)sintyou;					//小数点型を整数に変換
 		
 		System.out.println(nenrei + sintyou1);			//年齢と身長の数値を合計
+		System.out.println();
 		
 //		問１３）			
 //		12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください			
