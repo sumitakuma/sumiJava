@@ -40,7 +40,9 @@ public class Qes1_6 {
 		String[] nums = line.split("、");
 		scanner.close();
 		
+		// 乱数の数値
 		int count0 = 12;
+		// テレビ＆ディスプレイの数値を保存する用
 		int count1 = 0;
 		
 		
@@ -80,12 +82,18 @@ public class Qes1_6 {
 			// ディスプレイが入力された場合
 			case "ディスプレイ":
 			
-				// テレビとディスプレイ合わせて11 
+				// テレビとディスプレイ合わせて11以下
+				// 0~11までの乱数から初期値を引いた値を代入
 				int count2 = rand.nextInt(count0 - count1);
 				
+				// 入力値がテレビであった場合を真として定義
 				String text = (num.equals("テレビ")) ? "テレビの残り台数は" + count2 + "台です" + "\n" 
 						: "ディスプレイの残り台数は" + count2 + "台です" + "\n";
+				
+				// テレビとディスプレイの両方が出力
 				System.out.println(text);
+				
+				// 1個目に5(0~4)が出た場合、2個目に7(0~6)が出るようにする
 				count1 = count2;
 				break;
 
