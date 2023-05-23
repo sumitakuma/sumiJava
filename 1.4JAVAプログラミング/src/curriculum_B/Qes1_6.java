@@ -8,87 +8,96 @@ import java.util.Scanner;
 public class Qes1_6 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+	
 
-//		問６）拡張for文・Switch文・条件演算子 ※普通のif文は使用不可
-//		入力した商品の残り台数が出力されるシステムを下記の条件で作成してください
-		
-//		・Switch文内でテレビとディスプレイは続けて書くようにしてください、条件演算子で出力される値を変更してください
-//		・例：テレビorディスプレイと受け取った場合〇〇に受け取った値が入る→「〇〇の残り台数は9台です」
-//		・入力される値は右記の表のどれかが入力され、入力回数の縛りはありません
-//		・入力された値は「、」区切りで指定してください
-//		・そのほかの値が入力された場合下記を出力されるようにしてください
-			//『受け取った値』は指定の商品ではありません
-//		・残り台数は0〜11までのランダムな値が出力されるようにしてください
+		// -----------------------------------------------------------------------------------------------------------------------------------
+				
+		// 問６）拡張for文・Switch文・条件演算子 ※普通のif文は使用不可
+		// 入力した商品の残り台数が出力されるシステムを下記の条件で作成してください
+				
+		// ・Switch文内でテレビとディスプレイは続けて書くようにしてください、条件演算子で出力される値を変更してください
+		// ・例：テレビorディスプレイと受け取った場合〇〇に受け取った値が入る→「〇〇の残り台数は9台です」
+		// ・入力される値は右記の表のどれかが入力され、入力回数の縛りはありません
+		// ・入力された値は「、」区切りで指定してください
+		// ・そのほかの値が入力された場合下記を出力されるようにしてください
+		// 『受け取った値』は指定の商品ではありません
+		// ・残り台数は0〜11までのランダムな値が出力されるようにしてください
 
+		// -----------------------------------------------------------------------------------------------------------------------------------
 		
-		//入力内容をスキャン
+		
+		// 入力内容をスキャン
 		Scanner scanner = new Scanner(System.in);
 		
-		//入力された内容を取得
+		// 入力された内容を取得
 		String line = scanner.nextLine();
 		
-		//乱数
+		// 乱数
 		Random rand = new Random();
 		
 		
-		//配列denkisに商品名を入れる
-		String[] denkis = {"パソコン","冷蔵庫","扇風機","洗濯機","加湿器","テレビ","ディスプレイ"};
-		
-		//パソコン＝０、冷蔵庫＝１、扇風機＝２、洗濯機＝３、加湿器＝４、テレビ＝５、ティスプレイ＝６、その他商品＝７
-		
-		//カンマを代入
+		// カンマを代入
 		String[] nums = line.split("、");
+		scanner.close();
+		
+		int count0 = 12;
+		int count1 = 0;
 		
 		
-		//拡張for文
+		// 拡張for文
 		for(String num : nums) {
 			
-			//switch文にnums[i]を挿入
+			// switch文にnums[i]を挿入
 			switch(num) {
 			
-			//パソコンが入力された場合
+			// パソコンが入力された場合
 			case "パソコン":
-				System.out.println(denkis[0] + "の残り台数は" + rand.nextInt(12) + "台です");
+				System.out.println( "パソコンの残り台数は" + rand.nextInt(count0) + "台です" + "\n");
 				break;
 				
-			//冷蔵庫が入力された場合
+			// 冷蔵庫が入力された場合
 			case "冷蔵庫":
-				System.out.println(denkis[1] +  "の残り台数は" + rand.nextInt(12)+ "台です");
+				System.out.println( "冷蔵庫の残り台数は" + rand.nextInt(count0)+ "台です" + "\n");
 				break;
 				
-			//扇風機が入力された場合
+			// 扇風機が入力された場合
 			case "扇風機":
-				System.out.println(denkis[2] +  "の残り台数は" + rand.nextInt(12) + "台です");
+				System.out.println( "扇風機の残り台数は" + rand.nextInt(count0) + "台です" + "\n");
 				break;
 				
-			//洗濯機が入力された場合
+			// 洗濯機が入力された場合
 			case "洗濯機":
-				System.out.println(denkis[3] +  "の残り台数は" + rand.nextInt(12) + "台です");
+				System.out.println( "洗濯機の残り台数は" + rand.nextInt(count0) + "台です" + "\n");
 				break;
 				
-			//加湿器が入力された場合
+			// 加湿器が入力された場合
 			case "加湿器":
-				System.out.println(denkis[4] +  "の残り台数は" + rand.nextInt(12) + "台です");
+				System.out.println( "加湿器の残り台数は" + rand.nextInt(count0) + "台です" + "\n");
 				break;
 				
-			//テレビが入力された場合
+			// テレビが入力された場合
 			case "テレビ":
-				System.out.println(denkis[5] +  "の残り台数は" + rand.nextInt(12) + "台です");
-				break;
-				
-			//ディスプレイが入力された場合
+			// ディスプレイが入力された場合
 			case "ディスプレイ":
-				System.out.println(denkis[6] +  "の残り台数は" + rand.nextInt(12) + "台です");
-				break;
+			
+				// テレビとディスプレイ合わせて11 
+				int count2 = rand.nextInt(count0 - count1);
 				
-			//それ以外の文字が入力された場合
+				String text = (num.equals("テレビ")) ? "テレビの残り台数は" + count2 + "台です" + "\n" 
+						: "ディスプレイの残り台数は" + count2 + "台です" + "\n";
+				System.out.println(text);
+				count1 = count2;
+				break;
+
+				
+			// それ以外の文字が入力された場合
 			default:
-				System.out.println("『" + num + "』は指定の商品ではありません");
+				System.out.println("『" + num + "』は指定の商品ではありません" + "\n");
 				break;
 				}
 			
 			}
+		
 		}
 		
 		
