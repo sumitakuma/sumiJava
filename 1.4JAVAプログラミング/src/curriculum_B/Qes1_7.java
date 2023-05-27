@@ -10,7 +10,6 @@ public class Qes1_7 {
 	public static void main(String[] args) {
 
 		// -----------------------------------------------------------------------------------------------------------------------------------
-
 		// 問７）
 		// N人の生徒の成績を管理するプログラムを下記条件で作成してください
 		// ・N人の生徒の成績を入力できるようにしてください 入力値は上から英語・数学・理科・社会の点数としてください
@@ -41,18 +40,14 @@ public class Qes1_7 {
 		// 全体の平均点は10.00点です。
 
 		// -----------------------------------------------------------------------------------------------------------------------------------
-
 		// subject[0]英語、[1]数学、[2]理科、[3]社会
 		String[] subjects = {"英語","数学","理科","社会"};
-
-
 
 		// 入力内容をスキャン
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("生徒の人数を入力してください (2以上) :");
-
-
+		
 		// 入力された人数を格納
 		int people = scanner.nextInt();
 
@@ -68,14 +63,10 @@ public class Qes1_7 {
 		ArrayList<Integer> Science = new ArrayList<Integer>();
 		ArrayList<Integer> Society= new ArrayList<Integer>();
 
-
-
-
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		// 上限が存在しないので、入力された人数に+１をした変数を作成し代用
 		int peapole2 = people + 1;
-
 		
 		// 個人の点数を表示
 		for(int i =1; i < peapole2; i++) {
@@ -100,34 +91,24 @@ public class Qes1_7 {
 			// 入力された点数を格納
 			Society.add(scanner.nextInt());
 			System.out.println();
-
-
 		}
 		// スキャナーを閉じる
 		scanner.close();
 		
-
 		// 個人の4科目の点数の平均点
 		for(int i =0; i < people; i++) {
 
 			// 小数点以下を表示するためdouble型
 			double ave = (English.get(i) + Math.get(i) + Science.get(i) + Society.get(i)) / 4;
 
-
-
 			// 個人の平均点,小数点第二位まで表示
 			System.out.println(i+1 + "人目の平均点は" + (String.format("%.2f", ave)) + "点です。" + "\n");
 		}
 
-
 		// 数値の基本的な統計情報を取得（IntSummaryStatisticsクラス、getAverageメソッド、getSumメソッド）
-
 		// mapToInt　(入力したクラスに用意されたメソッドをStreamで指定した引数に実行)
-
 		// summaryStatistics　(要約統計。最大値・最小値・平均等を計算できる)
-
 		// intValue　(intに変換したいintgerの変数)
-
 
 		// 英語の平均点,小数点第二位まで表示
 		IntSummaryStatistics aveE = English.stream()
@@ -136,14 +117,12 @@ public class Qes1_7 {
 
 		System.out.println(subjects[0] + "の平均点は" + (String.format("%.2f", aveE.getAverage())) + "点です。" + "\n");
 
-
 		// 数学の平均点,小数点第二位まで表示
 		IntSummaryStatistics aveS = Math.stream()
 				.mapToInt(Integer::intValue)
 				.summaryStatistics();
 
 		System.out.println(subjects[1] + "の平均点は" + (String.format("%.2f", aveS.getAverage())) + "点です。" + "\n");
-
 
 		// 理科の平均点,小数点第二位まで表示
 		IntSummaryStatistics aveR = Science.stream()
@@ -152,19 +131,14 @@ public class Qes1_7 {
 
 		System.out.println(subjects[2] + "の平均点は" + (String.format("%.2f", aveR.getAverage())) + "点です。" + "\n");
 
-
 		// 社会の平均点,小数点第二位まで表示
 		IntSummaryStatistics aveY = Society.stream()
 				.mapToInt(Integer::intValue)
 				.summaryStatistics();
 
 		System.out.println(subjects[3] + "の平均点は" + (String.format("%.2f", aveY.getAverage())) + "点です。" + "\n");
-		
 
 		// 全体の平均点,小数点第二位まで表示
 		System.out.println("全体の平均点は" + (String.format("%.2f",(aveE.getAverage() + aveS.getAverage() + aveR.getAverage() + aveY.getAverage()) / 4)) + "点です。" + "\n");
-
-
 	}
-
 }

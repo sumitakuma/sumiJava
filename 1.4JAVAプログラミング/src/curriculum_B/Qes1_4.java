@@ -25,31 +25,27 @@ public class Qes1_4 {
 		// -----------------------------------------------------------------------------------------------------------------------------------
 
 
-		System.out.println("-----------------------------------課題４-----------------------------------");
+		System.out.println("-----------------------------------課題4-----------------------------------");
 
 		// 九九の前部分のループ
 		for (int i =1; i < 10; i++) {
 			
 			// 九九の後ろ部分のループ
-			for (int j = 1; j < 10; j++) {
-				
+			for (int j = 1; j < 10; j++) {	
 
 				// kukuに計算結果を代入
 				int kuku = i * j;
 				
 				// i ×　j　＝　kuku
-				System.out.print(String.format("%02d", i) + " * " + String.format("%02d", j) + " = " + String.format("%02d",kuku));
+				System.out.print(" " + String.format("%02d", i) + " * " + String.format("%02d", j) + " = " + String.format("%02d",kuku) + " ");
 				
 				// 文末から||を省く
 				if(j < 9) {
 					System.out.print("||");
 				} else {
-					System.out.print("\n");
+					System.out.print("\n\n");
 				}
 			}
-
 		}
-
 	}
-
 }
