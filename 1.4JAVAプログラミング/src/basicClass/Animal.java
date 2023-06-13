@@ -1,4 +1,5 @@
 package basicClass;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -6,10 +7,14 @@ public class Animal {
 	public static void main(String[] args) {
 		
 		// Q1：Dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
-		Dog name = new Dog("Sara");
+		Dog name = new Dog();
+		name.setName("Sara");
+		System.out.println(name.getName());
 		
 		// Q2：Dogクラスを呼び出して変数に代入し、動物の数をコンソールに出力してください。
-		Dog number = new Dog(1);
+		Dog number = new Dog();
+		number.setNum(5);
+		System.out.println(number.getNum());
 		
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
 		
