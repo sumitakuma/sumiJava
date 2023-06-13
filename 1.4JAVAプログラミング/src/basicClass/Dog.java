@@ -12,27 +12,12 @@ public class Dog {
 	
 	// 引数無しのコンストラクタ
 	Dog() {
-	}
-	
-	// Animalで呼び出した文字列を返す
-	String getName() {
-		return name;
-	}
-	
-	// Animalで引数内にセットする文字列をString nameに代入
-	void setName(String name) {
-		this.name = name;
+		this.name = "犬";
 	}
 	
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
 	
-	// Animalで呼び出した数値を返す
-	int getNum() {
-		return num;
-	}
-	
-	// Animalで引数内にセットする数値をint numに代入
-	void setNum(int num) {
+	Dog(int num) {
 		this.num = num;
 	}
 }

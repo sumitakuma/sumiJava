@@ -7,14 +7,12 @@ public class Animal {
 	public static void main(String[] args) {
 		
 		// Q1：Dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
-		Dog name = new Dog();
-		name.setName("Sara");
-		System.out.println(name.getName());
+		Dog Dog = new Dog();
+		System.out.println(Dog.name);
 		
 		// Q2：Dogクラスを呼び出して変数に代入し、動物の数をコンソールに出力してください。
-		Dog number = new Dog();
-		number.setNum(5);
-		System.out.println(number.getNum());
+		Dog Dogs = new Dog(4);
+		System.out.println(Dogs.num);
 		
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
 		
