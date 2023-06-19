@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class processing {
+public class Processing {
 	// フィールド変数
 	
 	// あいさつ
@@ -15,12 +15,15 @@ public class processing {
 	public String food;
 	// 種類
 	public String type;
+	// null用
+	public String N;
 	
-	public processing() {
+	public Processing() {
 		this.hello = "こんにちは！";
 		this.country = "日本";
 		this.food = "寿司";
 		this.type = "和食";
+		this.N = null;
 	}
 	
 	// 現在日時を取得
@@ -32,7 +35,7 @@ public class processing {
 	// 現在日時を表示形式にはめ込み、変数に代入
 	public String date2 = dtf.format(date1);
 	
-	public processing(String date2) {
+	public Processing(String date2) {
 		this.date2 = date2;
 	}
 }
