@@ -15,15 +15,12 @@ public class Processing {
 	public String food;
 	// 種類
 	public String type;
-	// null用
-	public String N;
 	
 	public Processing() {
 		this.hello = "こんにちは！";
 		this.country = "日本";
 		this.food = "寿司";
 		this.type = "和食";
-		this.N = null;
 	}
 	
 	// 現在日時を取得
