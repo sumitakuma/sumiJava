@@ -1,6 +1,8 @@
+// 実行パッケージ
 package lesson2425Exe;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 import lesson2425Pro.Processing2425;
@@ -12,24 +14,30 @@ public class Execution2425 {
 		// 名前を入力するためのスキャナー
 		Scanner scanner = new Scanner(System.in);
 		String userName = scanner.next();
-		
+		scanner.close();
 		// フィールドProcessing2425をuserに変換
 		Processing2425 user = new Processing2425();
-		// フィールドProcessing2425をnumberに変換
-		Processing2425 number = new Processing2425();
-		// 乱数を0～999の範囲で設定
-		number.setNum(1000);
 		
+		user.setHello("こんにちは");
+		user.setStatus("ステータス");
+		user.setHitPoint("HP：");
+		user.setMagical("MP：");
+		user.setAttack("攻撃力：");
+		user.setSpeed("素早さ：");
+		user.setDefence("防御力：");
+		user.setShout("さあ冒険に出かけよう！");
+
+		Random rand = new Random();
 		// 出力
 		if (Objects.nonNull(user)) {
-			System.out.println(user.hello + "「" + userName + "」さん");
-			System.out.println(user.status);
-			System.out.println(user.hitPoint + number.getNum());
-			System.out.println(user.magical + number.getNum());
-			System.out.println(user.attack + number.getNum());
-			System.out.println(user.speed + number.getNum());
-			System.out.println(user.defense + number.getNum() + "\n");
-			System.out.println(user.shout);
+			System.out.println(user.getHello() + " 「" + userName + "」 さん");
+			System.out.println(user.getStatus());
+			System.out.println(user.getHitPoint() + rand.nextInt(1000));
+			System.out.println(user.getMagical() + rand.nextInt(1000));
+			System.out.println(user.getAttack() + rand.nextInt(1000));
+			System.out.println(user.getSpeed() + rand.nextInt(1000));
+			System.out.println(user.getDefence() + rand.nextInt(1000) + "\n");
+			System.out.println(user.getShout());
 		}
 	}
 }

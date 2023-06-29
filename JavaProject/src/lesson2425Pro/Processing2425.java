@@ -1,48 +1,128 @@
 // 処理パッケージ
 package lesson2425Pro;
 
-import java.util.Random;
-
-
-//サブクラス & getter setter
+//サブクラス & getter
 public class Processing2425 extends Field {
 	
-	// ランダム変数
-	Random rand = new Random();
-	
-	// 数値のゲッター
-	public int getNum() {
-		return num;
+	// 引数無しのコンストラクタ
+	public Processing2425() {
 	}
-	// 数値のセッター & 乱数セット
-	public void setNum(int num) {
-		this.num = rand.nextInt(1000);
+	
+	public void superHello() {
+		System.out.println(this.getHello());
+	}
+	
+	public void superStatus() {
+		System.out.println(this.getStatus());
+	}
+	
+	public void superHitPoint() {
+		System.out.println(this.getHitPoint());
+	}
+	
+	public void superMagical() {
+		System.out.println(this.getMagical());
+	}
+	
+	public void superAttack() {
+		System.out.println(this.getAttack());
+	}
+	
+	public void superSpeed() {
+		System.out.println(this.getSpeed());
+	}
+	
+	public void superDefence() {
+		System.out.println(this.getDefence());
+	}
+	
+	public void superShout() {
+		System.out.println(this.getShout());
 	}
 }
 
 // スーパークラス
+// フィールド
 class Field {
-//	protected String name;
-	public String hello; // こんにちは
-	public String status; // ステータス
-	public String hitPoint; // HP
-	public String magical; // MP
-	public String attack; // 攻撃力
-	public String speed; // 素早さ
-	public String defense; // 防御力
-	protected int num; // 数値
-	public String shout; // さあ冒険に出かけよう！
+	private String hello;
+	private String status;
+	private String hitPoint;
+	private String magical;
+	private String attack;
+	private String speed;
+	private String defense;
+	private String shout;
 	
-	// 引数無しのコンストラクタ
-	public Field() {
-		this.hello = "こんにちは";
-		this.status = "ステータス";
-		this.hitPoint = "HP：";
-		this.magical = "MP：";
-		this.attack = "攻撃力：";
-		this.speed = "素早さ：";
-		this.defense = "防御力：";
-		this.shout = "さあ冒険に出かけよう！";
+	
+	// 「こんにちは」-----------------------------
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+	public String getHello() {
+		return hello;
+	}
+	// -------------------------------------------
+	
+	// 「ステータス」-----------------------------
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getStatus() {
+		return status;
+	}
+	// -------------------------------------------
+	
+	// 「HP」-------------------------------------
+	public void setHitPoint(String hitPoint) {
+		this.hitPoint = hitPoint;
+	}
+	public String getHitPoint() {
+		return hitPoint;
+	}
+	// -------------------------------------------
+	
+	// 「MP」-------------------------------------
+	public void setMagical(String magical) {
+		this.magical = magical;
+	}
+	public String getMagical() {
+		return magical;
+	}
+	// -------------------------------------------
+	
+	// 「攻撃力」---------------------------------
+	public void setAttack(String attack) {
+		this.attack = attack;
+	}
+	public String getAttack() {
+		return attack;
+	}
+	// -------------------------------------------
+	
+	// 「素早さ」---------------------------------
+	public void setSpeed(String speed) {
+		this.speed = speed;
+	}
+	public String getSpeed() {
+		return speed;
+	}
+	// -------------------------------------------
+	
+	// 「防御力」---------------------------------
+	public void setDefence(String defense) {
+		this.defense = defense;
+	}
+	public String getDefence() {
+		return defense;
+	}
+	// -------------------------------------------
+	
+	// 「さあ冒険にでかけよう」-------------------
+	public void setShout(String shout) {
+		this.shout = shout;
+	}
+	public String getShout() {
+		return shout;
 	}
 }
 /*
