@@ -4,40 +4,39 @@ package lesson2425Pro;
 //サブクラス & getter
 public class Processing2425 extends Field {
 	
-	// 引数無しのコンストラクタ
 	public Processing2425() {
 	}
 	
-	public void superHello() {
-		System.out.println(this.getHello());
+	public void SuperHello() {
+		System.out.println(super.getHello());
 	}
 	
-	public void superStatus() {
-		System.out.println(this.getStatus());
+	public void SuperStatus() {
+		System.out.println(super.getStatus());
 	}
 	
-	public void superHitPoint() {
-		System.out.println(this.getHitPoint());
+	public void SuperHitPoint() {
+		System.out.println(super.getHitPoint());
 	}
 	
-	public void superMagical() {
-		System.out.println(this.getMagical());
+	public void SuperMagical() {
+		System.out.println(super.getMagical());
 	}
 	
-	public void superAttack() {
-		System.out.println(this.getAttack());
+	public void SuperAttack() {
+		System.out.println(super.getAttack());
 	}
 	
-	public void superSpeed() {
-		System.out.println(this.getSpeed());
+	public void SuperSpeed() {
+		System.out.println(super.getSpeed());
 	}
 	
-	public void superDefence() {
-		System.out.println(this.getDefence());
+	public void SuperDefence() {
+		System.out.println(super.getDefence());
 	}
 	
-	public void superShout() {
-		System.out.println(this.getShout());
+	public void SuperShout() {
+		System.out.println(super.getShout());
 	}
 }
 
@@ -52,7 +51,9 @@ class Field {
 	private String speed;
 	private String defense;
 	private String shout;
-	
+
+	Field() {
+	}
 	
 	// 「こんにちは」-----------------------------
 	public void setHello(String hello) {
