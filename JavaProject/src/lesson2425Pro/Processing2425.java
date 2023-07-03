@@ -51,7 +51,8 @@ class Field {
 	private String speed;
 	private String defense;
 	private String shout;
-
+	
+	// 引数・中身無しコンストラクタ
 	Field() {
 	}
 	

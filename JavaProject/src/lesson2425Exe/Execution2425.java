@@ -26,7 +26,8 @@ public class Execution2425 {
 		user.setSpeed("素早さ：");
 		user.setDefence("防御力：");
 		user.setShout("さあ冒険に出かけよう！");
-
+		
+		// ランダム変数
 		Random rand = new Random();
 		// 出力
 		if (Objects.nonNull(user)) {
